@@ -1,0 +1,64 @@
+/* LastName_Mod2_2.css */
+
+html,
+body {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+  text-align: left;
+  padding-top: 15px;
+}
+
+address {
+  text-align: center;
+  font-style: normal;
+}
+
+address p {
+  margin: 0;
+}
+
+/* Website link */
+address a {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #4F3674;
+  text-decoration: none;
+}
+
+address a:hover {
+  text-decoration: underline;
+  background-color: #D6A800;
+}
+
+/* Visited styling (choice) */
+address a:visited {
+  color: #2F2450;
+}
+
+.sentence {
+  font-style: italic;
+}
+
+.intro {
+  text-indent: 2em;
+}
