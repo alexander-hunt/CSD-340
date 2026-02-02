@@ -1,0 +1,52 @@
+/* Basic page layout */
+#container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Center h1 text and color it with rgba */
+h1 {
+  text-align: center;
+  color: rgba(40, 80, 160, 0.95);
+}
+
+/* Image gallery grid */
+#image-gallery {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Center h3 text and give it a different rgba color */
+h3 {
+  text-align: center;
+  color: rgba(160, 60, 60, 0.95);
+}
+
+/* Center images inside figure */
+figure {
+  text-align: center;
+  margin: 0;
+}
+
+/* Make images fit nicely */
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Figcaption styling: italic + .75em + different rgba color */
+figcaption {
+  font-style: italic;
+  font-size: 0.75em;
+  margin-top: 8px;
+  color: rgba(40, 120, 80, 0.95);
+}
+
+/* Back link styling (optional, but clean) */
+.back-link {
+  margin-top: 40px;
+  text-align: center;
+}
