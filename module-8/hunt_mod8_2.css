@@ -33,10 +33,7 @@ h1 {
 
 /* Container */
 #container {
-    margin-top: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 10px;
+  margin: 2% 5% 100px;
 }
 
 /* Card */
@@ -65,9 +62,10 @@ h1 {
 /* Footer */
 footer {
     background-color: #2a4d69;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    left: 0;
 }
 
 footer p {
@@ -85,4 +83,22 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Movies table */
+#movies {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#movies td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#movies th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
 }
