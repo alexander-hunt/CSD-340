@@ -68,24 +68,9 @@ footer {
     left: 0;
 }
 
-/* Left side */
-footer .left {
-    color: #ffffff;
-    font-style: italic;
-    float: left;
-    margin: 10px;
-}
-
-/* Right side */
-footer .right {
-    float: right;
-    margin: 10px;
-}
-
 footer a {
     text-decoration: none;
     color: #ffffff;
-    font-style: italic;
 }
 
 footer a:hover {
