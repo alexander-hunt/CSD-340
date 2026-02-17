@@ -1,0 +1,33 @@
+/* Footer */
+footer {
+    background-color: #bf3f00;   /* adjust if needed to match your color */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 40px;
+}
+
+/* Left side */
+footer .left {
+    color: #ffffff;
+    font-style: italic;
+    float: left;
+    margin: 10px;
+}
+
+/* Right side */
+footer .right {
+    float: right;
+    margin: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    font-style: italic;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
