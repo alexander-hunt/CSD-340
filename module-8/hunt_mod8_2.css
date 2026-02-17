@@ -63,6 +63,8 @@ h1 {
 footer {
     background-color: #2a4d69;
     position: fixed;
+    bottom: 0;
+    width: 100%;
     left: 0;
 }
 
@@ -72,6 +74,7 @@ footer p {
     float: right;
     padding-right: 10px;
     font-style: italic;
+    left: 0;
 }
 
 footer a {
