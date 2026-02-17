@@ -71,10 +71,10 @@ footer {
 footer p {
     color: #ffffff;
     font-weight: 400;
-    float: right;
-    padding-right: 10px;
+    padding-left: 10px;
     font-style: italic;
-    left: 0;
+    float: left;
+    margin: 0;
 }
 
 footer a {
