@@ -67,8 +67,16 @@ footer {
     width: 100%;
     left: 0;
 }
+footer p {
+    text-decoration: none;
+    color: #ffffff;
+    float: left;
+    margin-left: 10px;
+}
 
 footer a {
+    float: right;
+    margin-right: 10px;
     text-decoration: none;
     color: #ffffff;
 }
