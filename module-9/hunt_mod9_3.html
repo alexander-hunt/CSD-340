@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="CSD 340 Module 9.3 assignment page." />
+  <meta name="keywords" content="CSD 340, HTML, CSS, Bellevue University" />
+  <meta name="author" content="alexander hunt" />
+
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <link rel="stylesheet" href="../module-2/Hunt_Mod2_2.css" />
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <h2>Chapter 1: A Short Story</h2>
+
+    <p class="intro">
+      Most mornings start the same way: I grab my notes, open my laptop, and tell myself I will focus for the next hour.
+      Once I start working, I try to keep things simple and take problems one step at a time.
+      That routine has made learning web development feel less overwhelming.
+    </p>
+
+    <p>
+      In this class, I am learning how structure and style work together.
+      HTML gives the page its bones, and CSS helps make it look clean and readable.
+      When something breaks, I slow down, check my tags, and fix the <span id="blank1">__________</span>.
+    </p>
+
+    <p>
+      Outside of school, I like activities that help me reset, like walking, listening to music, or working on small projects.
+      I have noticed that consistency matters more than perfection.
+      Small improvements add up, especially when I stay <span id="blank2">__________</span>.
+    </p>
+
+    <p>
+      My goal is to keep building skills that I can use in future classes and real projects.
+      Each assignment helps me practice the basics and get more comfortable with problem-solving.
+      By the end of the course, I want my pages to be more <span id="blank3">__________</span> and my code to be more <span id="blank4">__________</span>.
+    </p>
+
+    <div style="margin-top: 16px;">
+      <button type="button" onclick="fillBlank1()">Reveal Word 1</button>
+      <button type="button" onclick="fillBlank2()">Reveal Word 2</button>
+      <button type="button" onclick="fillBlank3()">Reveal Word 3</button>
+      <button type="button" onclick="fillBlank4()">Reveal Word 4</button>
+    </div>
+
+    <hr />
+
+    <address>
+      <p>
+        <a href="https://www.bellevue.edu" target="_blank" rel="noopener noreferrer">Bellevue University</a>
+      </p>
+      <p>1000 Galvin Road South</p>
+      <p>Bellevue, NE 68005</p>
+    </address>
+  </div>
+
+  <script>
+    // Four variables holding the string inputs for the span tags
+    var word1 = "mistake";
+    var word2 = "patient";
+    var word3 = "organized";
+    var word4 = "readable";
+
+    // One function + button per blank
+    function fillBlank1() {
+      document.getElementById("blank1").textContent = word1;
+    }
+
+    function fillBlank2() {
+      document.getElementById("blank2").textContent = word2;
+    }
+
+    function fillBlank3() {
+      document.getElementById("blank3").textContent = word3;
+    }
+
+    function fillBlank4() {
+      document.getElementById("blank4").textContent = word4;
+    }
+  </script>
+</body>
+</html>
