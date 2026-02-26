@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>
+      CSD 340 Web Development with HTML and CSS
+    </title>
+
+    <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+  </head>
+
+  <body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <br />
+
+    <!-- Main display area (starts with a default image) -->
+    <div>
+      <img id="mainImage" class="mainImage" src="bike_regular.jpg" alt="Large Image"
+           style="width:300px; height:200px;" />
+    </div>
+
+    <br />
+
+    <div>
+      Click a thumbnail image below to change the main image.
+      <br />
+    </div>
+
+    <br />
+
+    <!-- Thumbnails: use onclick to execute JavaScript function -->
+    <div>
+      <img border="0" src="bike_regular.jpg" alt="Bike"
+           style="width:150px; height:100px; cursor:pointer;"
+           onclick="displayImage('bike_regular.jpg');" />
+
+      <img border="0" src="bike_negative.jpg" alt="Bike Negative"
+           style="width:150px; height:100px; cursor:pointer;"
+           onclick="displayImage('bike_negative.jpg');" />
+    </div>
+
+    <br />
+
+    <div>
+      <img border="0" src="car_regular.jpg" alt="Car"
+           style="width:150px; height:100px; cursor:pointer;"
+           onclick="displayImage('car_regular.jpg');" />
+
+      <img border="0" src="car_negative.jpg" alt="Car Negative"
+           style="width:150px; height:100px; cursor:pointer;"
+           onclick="displayImage('car_negative.jpg');" />
+    </div>
+
+  </body>
+</html>
