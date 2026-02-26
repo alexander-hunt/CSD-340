@@ -18,33 +18,30 @@
         newNode.style.width = "300px";
         newNode.style.height = "200px";
         largerImage.parentNode.replaceChild(newNode, largerImage);
+
       }
     </script>
 
-    <link rel='stylesheet' type='text/css' href='body1.css' />
   </head>
 
   <body>
     <h1>Assignment 10.3: JavaScript - Part 2</h1>
 
     <br />
-
-    <!-- Main display area (starts with a default image) -->
     <div>
       <img id="mainImage" class="mainImage" src="bike_regular.jpg" alt="Large Image"
            style="width:300px; height:200px;" />
     </div>
-
     <br />
 
     <div>
       Click a thumbnail image below to change the main image.
       <br />
+
     </div>
 
     <br />
 
-    <!-- Thumbnails: use onclick to execute JavaScript function -->
     <div>
       <img border="0" src="bike_regular.jpg" alt="Bike"
            style="width:150px; height:100px; cursor:pointer;"
