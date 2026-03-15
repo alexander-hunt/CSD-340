@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1f4e79;
+    }
+
+    p.instructions {
+      background-color: #eef5ff;
+      border-left: 5px solid #1f4e79;
+      padding: 12px;
+      border-radius: 5px;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 16px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .add-btn {
+      background-color: #2e8b57;
+    }
+
+    .delete-btn {
+      background-color: #c0392b;
+    }
+
+    .sort-btn {
+      background-color: #8e44ad;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .list-area {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .list-area h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    ol {
+      padding-left: 25px;
+    }
+
+    .empty-message {
+      color: #777;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p class="instructions">
+      Enter a task in the text box, then click <strong>Add</strong> to place it in your To Do List.
+      Click <strong>Delete Last Entry</strong> to remove the most recently added task.
+      Click <strong>Sort</strong> to sort the list alphabetically.
+    </p>
+
+    <div class="input-area">
+      <input type="text" id="todoInput" placeholder="Enter a task" />
+      <button class="add-btn" onclick="addItem()">Add</button>
+      <button class="delete-btn" onclick="deleteLastItem()">Delete Last Entry</button>
+      <button class="sort-btn" onclick="sortItems()">Sort</button>
+    </div>
+
+    <div class="list-area">
+      <h2>Things To Do:</h2>
+      <div id="displayList" class="empty-message">No items in the list yet.</div>
+    </div>
+  </div>
+
+  <script>
+    let todoList = [];
+
+    function addItem() {
+      const input = document.getElementById("todoInput");
+      const item = input.value.trim();
+
+      if (item === "") {
+        alert("Please enter a task before clicking Add.");
+        return;
+      }
+
+      todoList.push(item);
+      alert('Added: "' + item + '"');
+
+      input.value = "";
+      displayItems();
+    }
+
+    function deleteLastItem() {
+      if (todoList.length === 0) {
+        alert("There are no items to delete.");
+        return;
+      }
+
+      const deletedItem = todoList.pop();
+      alert('Deleted: "' + deletedItem + '"');
+
+      displayItems();
+    }
+
+    function sortItems() {
+      if (todoList.length === 0) {
+        alert("There are no items to sort.");
+        return;
+      }
+
+      todoList.sort();
+      alert("The To Do List has been sorted.");
+
+      displayItems();
+    }
+
+    function displayItems() {
+      const displayDiv = document.getElementById("displayList");
+
+      if (todoList.length === 0) {
+        displayDiv.innerHTML = '<p class="empty-message">No items in the list yet.</p>';
+        return;
+      }
+
+      let output = "<ol>";
+      for (let i = 0; i < todoList.length; i++) {
+        output += "<li>" + todoList[i] + "</li>";
+      }
+      output += "</ol>";
+
+      displayDiv.innerHTML = output;
+    }
+  </script>
+</body>
+</html>
